@@ -2,12 +2,14 @@ package com.barry.sorting;
 
 import java.util.Arrays;
 
+import static com.barry.uilts.Utils.*;
+
 public class ThreeFoolsSorting {
 
 
     public static void main(String[] args) {
         int testTime = 500000;
-        int maxSize = 10;
+        int maxSize = 11;
         int maxValue = 100;
         for (int i = 0; i < testTime; i++) {
             int[] arr = buildArray(maxSize, maxValue);
@@ -70,26 +72,4 @@ public class ThreeFoolsSorting {
         }
     }
 
-    private static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-
-    private static int[] buildArray(int size, int max) {
-        int[] arr = new int[size];
-        for (int i = 0; i < size; i++) {
-            arr[i] = (int) (Math.random() * max - 1);
-        }
-        return arr;
-    }
-
-    private static int[] copyArray(int[] arr) {
-        if (arr == null) {
-            return null;
-        }
-        int[] res = new int[arr.length];
-        System.arraycopy(arr, 0, res, 0, arr.length);
-        return res;
-    }
 }
