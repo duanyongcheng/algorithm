@@ -2,12 +2,11 @@ package com.barry.code.sort;
 
 public class MergeSort {
 
-    public static int[] mergeSort(int[] arr) {
+    public static void mergeSort(int[] arr) {
         if (arr == null || arr.length <= 1) {
-            return arr;
+            return;
         }
         sort(arr, 0, arr.length - 1);
-        return arr;
     }
 
     private static void sort(int[] arr, int l, int r) {
