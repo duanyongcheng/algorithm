@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static com.barry.code.BinaryTreeTraversalIteration.*;
+import static com.barry.code.tree.BinaryTreeTraversalIteration.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BinaryTreeTraversalIterationTest {

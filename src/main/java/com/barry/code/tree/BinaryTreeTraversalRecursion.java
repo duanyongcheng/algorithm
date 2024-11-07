@@ -1,4 +1,4 @@
-package com.barry.code;
+package com.barry.code.tree;
 
 import com.barry.structure.TreeNode;
 
