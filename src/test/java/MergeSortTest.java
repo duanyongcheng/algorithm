@@ -15,7 +15,7 @@ class MergeSortTest {
         // 通过随机数组测试100000次
         for (int i = 0; i < 100000; i++) {
             int[] arr = ArrayUtils.generateRandomArray(1000, 100);
-            MergeSort.mergeSort(arr);
+            MergeSort.sortArray(arr);
             int[] expected = arr.clone();
             Arrays.sort(expected);
             assertArrayEquals(expected, arr);

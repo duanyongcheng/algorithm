@@ -2,11 +2,15 @@ package com.barry.code.sort;
 
 public class MergeSort {
 
-    public static void mergeSort(int[] arr) {
-        if (arr == null || arr.length <= 1) {
-            return;
+    private static int MAXN = 50001;
+
+    private static int[] HELP = new int[MAXN];
+
+    public static int[] sortArray(int[] arr) {
+        if (arr.length > 1) {
+            sort(arr, 0, arr.length - 1);
         }
-        sort(arr, 0, arr.length - 1);
+        return arr;
     }
 
     private static void sort(int[] arr, int l, int r) {
@@ -23,22 +27,21 @@ public class MergeSort {
         int a = l;
         int b = m + 1;
         int i = l;
-        int[] help = new int[arr.length];
         while (a <= m && b <= r) {
             if (arr[a] <= arr[b]) {
-                help[i++] = arr[a++];
+                HELP[i++] = arr[a++];
             } else {
-                help[i++] = arr[b++];
+                HELP[i++] = arr[b++];
             }
         }
         while (a <= m) {
-            help[i++] = arr[a++];
+            HELP[i++] = arr[a++];
         }
         while (b <= r) {
-            help[i++] = arr[b++];
+            HELP[i++] = arr[b++];
         }
         while (l <= r) {
-            arr[l] = help[l++];
+            arr[l] = HELP[l++];
         }
     }
 }
